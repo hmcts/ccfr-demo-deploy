@@ -10,7 +10,7 @@ lock('fees-register-demo-deploy') {
         deleteDir()
     }
 
-    if (deploymentRequired) {
+    onMaster {
         stageWithNotification('Deploy to Demo') {
             ansible.runDeployPlaybook(version, 'demo')
         }
