@@ -12,7 +12,7 @@ lock('fees-register-demo-deploy') {
 
     onMaster {
         stageWithNotification('Deploy to Demo') {
-            ansible.runDeployPlaybook(version, 'demo')
+            ansible.runDeployPlaybook('', 'demo')
         }
     }
 }
