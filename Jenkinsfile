@@ -4,7 +4,7 @@ import uk.gov.hmcts.Ansible
 
 def ansible = new Ansible(this, 'ccfr')
 
-lock('payments-demo-deploy') {
+lock('fees-register-demo-deploy') {
 
   try {
     node {
