@@ -5,7 +5,6 @@ import uk.gov.hmcts.Ansible
 def ansible = new Ansible(this, 'ccfr')
 
 lock('fees-register-demo-deploy') {
-
   try {
     node {
       onMaster {
@@ -16,7 +15,7 @@ lock('fees-register-demo-deploy') {
       }
     }
   } catch (err) {
-    notifyBuildFailure channel: '#cc_tech'
+    notifyBuildFailure channel: '#cc-payments-tech'
     throw err
   }
 }
